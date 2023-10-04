@@ -1,0 +1,145 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Battery 5V
+U 1 1 6513213A
+P 1500 3750
+F 0 "5V" H 1608 3796 50  0000 L CNN
+F 1 "Battery" H 1608 3705 50  0000 L CNN
+F 2 "" V 1500 3810 50  0001 C CNN
+F 3 "~" V 1500 3810 50  0001 C CNN
+	1    1500 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED RED
+U 1 1 65132C60
+P 2750 4450
+F 0 "RED" H 2743 4667 50  0000 C CNN
+F 1 "LED" H 2743 4576 50  0000 C CNN
+F 2 "" H 2750 4450 50  0001 C CNN
+F 3 "~" H 2750 4450 50  0001 C CNN
+	1    2750 4450
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:C 1mF
+U 1 1 65133A32
+P 3400 3400
+F 0 "1mF" H 3515 3446 50  0000 L CNN
+F 1 "C" H 3515 3355 50  0000 L CNN
+F 2 "" H 3438 3250 50  0001 C CNN
+F 3 "~" H 3400 3400 50  0001 C CNN
+	1    3400 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R 1kΩ
+U 1 1 65135428
+P 2150 3600
+F 0 "1kΩ" H 2220 3646 50  0000 L CNN
+F 1 "R" H 2220 3555 50  0000 L CNN
+F 2 "" V 2080 3600 50  0001 C CNN
+F 3 "~" H 2150 3600 50  0001 C CNN
+	1    2150 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R 1kΩ
+U 1 1 65136234
+P 1800 3600
+F 0 "1kΩ" H 1870 3646 50  0000 L CNN
+F 1 "R" H 1870 3555 50  0000 L CNN
+F 2 "" V 1730 3600 50  0001 C CNN
+F 3 "~" H 1800 3600 50  0001 C CNN
+	1    1800 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 4150 1500 3950
+Wire Wire Line
+	1500 3550 1500 3450
+Wire Wire Line
+	1800 3450 1500 3450
+Connection ~ 1500 3450
+Wire Wire Line
+	1500 3450 1500 3350
+Wire Wire Line
+	2050 3450 2050 3950
+Connection ~ 2150 3750
+Wire Wire Line
+	1800 3750 2150 3750
+Wire Wire Line
+	2050 3450 2150 3450
+Wire Wire Line
+	2050 3950 2400 3950
+Wire Wire Line
+	2150 3750 2400 3750
+Wire Wire Line
+	2400 3950 2400 4300
+Wire Wire Line
+	2400 4300 3500 4300
+Wire Wire Line
+	3500 4300 3500 3550
+Wire Wire Line
+	3500 3550 3400 3550
+Connection ~ 2400 3950
+$Comp
+L Device:R 220Ω
+U 1 1 651332F8
+P 1500 4300
+F 0 "220Ω" H 1570 4346 50  0000 L CNN
+F 1 "R" H 1570 4255 50  0000 L CNN
+F 2 "" V 1430 4300 50  0001 C CNN
+F 3 "~" H 1500 4300 50  0001 C CNN
+	1    1500 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Timer:LM555xM U?
+U 1 1 6513146C
+P 2900 3750
+F 0 "U?" H 2900 4331 50  0000 C CNN
+F 1 "LM555xM" H 2900 4240 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3750 3350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm555.pdf" H 3750 3350 50  0001 C CNN
+	1    2900 3750
+	-1   0    0    -1  
+$EndComp
+Connection ~ 3400 3550
+Wire Wire Line
+	1500 4150 2900 4150
+Wire Wire Line
+	3400 3250 3650 3250
+Wire Wire Line
+	3650 3250 3650 4150
+Wire Wire Line
+	3650 4150 2900 4150
+Connection ~ 2900 4150
+Wire Wire Line
+	1500 3350 2900 3350
+Wire Wire Line
+	2400 3550 2400 3100
+Wire Wire Line
+	2400 3100 3750 3100
+Wire Wire Line
+	3750 3100 3750 4450
+Wire Wire Line
+	3750 4450 2900 4450
+Connection ~ 1500 4150
+Wire Wire Line
+	2600 4450 1500 4450
+$EndSCHEMATC
